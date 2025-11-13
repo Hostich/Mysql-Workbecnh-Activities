@@ -1,0 +1,6 @@
+USE act_db;
+
+SELECT empno, lastname, COALESCE(salary,0) + COALESCE(bonus,0) + COALESCE(comm,0) AS "TOTAL INCOME",
+ FORMAT(COALESCE(salary,0) + COALESCE(bonus,0) + COALESCE(comm,0),2) AS "TOTAL INCOME"
+FROM EMPLOYEE
+WHERE empno BETWEEN '000010' AND '000060';

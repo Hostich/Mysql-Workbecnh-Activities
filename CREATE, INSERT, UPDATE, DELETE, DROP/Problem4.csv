@@ -1,0 +1,8 @@
+Field,Type,Null,Key,Default,Extra
+deptno,char(3),NO,PRI,NULL,
+deptname,varchar(40),NO,,NULL,
+mgrno,char(6),YES,MUL,NULL,
+admrdept,char(3),NO,MUL,NULL,
+location,varchar(50),YES,,NULL,
+DATE_CREATED,datetime,YES,,NULL,
+DEPT_CONTACT_NO,varchar(25),YES,,NULL,

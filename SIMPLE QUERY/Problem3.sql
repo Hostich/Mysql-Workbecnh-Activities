@@ -1,0 +1,6 @@
+USE act_db;
+
+
+SELECT DISTINCT edlevel
+FROM EMPLOYEE
+ORDER BY edlevel DESC;
