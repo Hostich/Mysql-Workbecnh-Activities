@@ -1,0 +1,12 @@
+USE act_db;
+
+SELECT workdept AS "DEPTNO", empno AS "EMPNO", lastname AS "LASTNAME", job AS "JOB", salary AS "SALARY"
+FROM EMPLOYEE
+WHERE workdept = 'A00' AND empno IN('000010','000110','000120')
+
+UNION 
+
+SELECT '' AS "DEPTNO", '' AS "EMPNO", '' AS "LASTNAME", 'SUM SALARY:' AS "JOB", SUM(salary) AS "SALARY"
+FROM EMPLOYEE
+WHERE workdept = 'A00' AND empno IN('000010','000110','000120')
+ORDER BY "SALARY" DESC;

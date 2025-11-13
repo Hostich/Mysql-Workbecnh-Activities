@@ -1,0 +1,9 @@
+USE act_db;
+
+
+SELECT CASE
+	WHEN (SELECT AVG(bonus) FROM EMPLOYEE WHERE workdept = 'E21') >
+		(SELECT AVG(bonus) FROM EMPLOYEE WHERE workdept = 'D21')
+	THEN (SELECT AVG(bonus) FROM EMPLOYEE WHERE workdept = 'E21') 
+    ELSE NULL
+END AS "AVG-BONUS";

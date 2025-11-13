@@ -1,0 +1,54 @@
+USE act_db;
+
+
+SELECT deptno AS "DEPTNO", 'DEPARMENT' AS "INFO", deptname AS "DEPTNAME"
+FROM DEPARTMENT
+WHERE deptno = 'A00'
+
+UNION 
+
+SELECT workdept AS "DEPTNO", empno AS "INFO", lastname AS "DEPTNAME"
+FROM EMPLOYEE
+WHERE workdept = 'A00' AND empno IN('000010','000110','000120')
+
+UNION
+
+SELECT deptno AS "DEPTNO", 'DEPARMENT' AS "INFO", deptname AS "DEPTNAME"
+FROM DEPARTMENT
+WHERE deptno = 'B01'
+
+UNION
+
+SELECT deptno AS "DEPTNO", projno AS "INFO", projname AS "DEPTNAME"
+FROM PROJECT
+WHERE deptno = 'B01'
+
+UNION 
+
+SELECT workdept AS "DEPTNO", empno AS "INFO", lastname AS "DEPTNAME"
+FROM EMPLOYEE
+WHERE workdept = 'B01'
+
+UNION 
+
+SELECT deptno AS "DEPTNO", 'DEPARMENT' AS "INFO", deptname AS "DEPTNAME"
+FROM DEPARTMENT
+WHERE deptno = 'C01'
+
+UNION
+
+SELECT deptno AS "DEPTNO", projno AS "INFO", projname AS "DEPTNAME"
+FROM PROJECT
+WHERE deptno = 'C01'
+
+UNION 
+
+SELECT workdept AS "DEPTNO", empno AS "INFO", lastname AS "DEPTNAME"
+FROM EMPLOYEE
+WHERE workdept = 'C01';
+
+
+
+
+
+

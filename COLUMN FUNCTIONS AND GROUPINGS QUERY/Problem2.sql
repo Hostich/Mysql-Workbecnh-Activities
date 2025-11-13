@@ -1,0 +1,5 @@
+USE act_db;
+
+SELECT FORMAT(SUM(salary),2) AS "TOTAL SALARY IN DEPT's D11 and D21"
+FROM EMPLOYEE
+WHERE workdept IN('D11','D21');
